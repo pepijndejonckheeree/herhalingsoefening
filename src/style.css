@@ -24,7 +24,7 @@ html {
 }
 
 .spaced {
-  padding: var(--padding);
+  padding:  var(--paddingBig);
 }
 
 .visually-hidden {
@@ -34,8 +34,7 @@ html {
 .prices__list {
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: 1fr fr1;
-  grid-template-columns: 1fr fr1;
+  grid-template-columns: 1fr 1fr;
 }
 
 .price {
@@ -44,9 +43,16 @@ html {
   padding: 1.2rem;
 }
 
+.price__button {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
 .price__button__wrapper {
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
 }
 
 .price__button__name {
@@ -60,8 +66,45 @@ html {
 
 .price__button__plus {
   background-color: var(--secondColor);
+  border-radius: 3px;
+  font-size: var(--title);
+  align-self: center;
   height: 3.8rem;
   width: 3.8rem;
+}
+
+.order {
+  border-bottom: 1px solid var(--greyColor);
+  font-size: var(--text);
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order__amount {
+  color: var(--mainColor);
+}
+
+.remove {
+  color: var(--greyColor);
+  font-size: var(--text);
+}
+
+.title_mini {
+  font-size: var(--smallText);
+}
+
+.total {
+  background-color: #fafafa;
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total__label, .total__price {
+  font-size: var(--text);
 }
 
 @media (min-width: 300px){
