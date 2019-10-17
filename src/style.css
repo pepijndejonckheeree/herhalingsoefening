@@ -14,3 +14,56 @@ html {
   box-sizing: inherit;
 }
 /* stylelint-enable */
+
+.layout {
+  font-family: var(--fontFamily);
+}
+
+.highlight {
+  background-color: var(--mainColor);
+}
+
+.spaced {
+  padding: var(--padding);
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.prices__list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-rows: 1fr fr1;
+  grid-template-columns: 1fr fr1;
+}
+
+.price {
+  background-color: white;
+  border-radius: 6px;
+  padding: 1.2rem;
+}
+
+.price__button__wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+.price__button__name {
+  font-size: var(--text);
+}
+
+.price__button__amount {
+  font-size: var(--smallText);
+  color: var(--greyColor);
+}
+
+.price__button__plus {
+  background-color: var(--secondColor);
+  height: 3.8rem;
+  width: 3.8rem;
+}
+
+@media (min-width: 300px){
+
+}
