@@ -24,7 +24,7 @@ html {
 }
 
 .spaced {
-  padding:  var(--paddingBig);
+  padding: var(--paddingBig);
 }
 
 .visually-hidden {
@@ -107,6 +107,46 @@ html {
   font-size: var(--text);
 }
 
-@media (min-width: 300px){
+.emptystate {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptystate__content {
+  padding: var(--paddingSmall);
+}
+
+.footer {
+  background-color: var(--darkColor);
+  color: var(--darkGreyColor);
+  font-size: var(--smallText);
+}
+
+.footer_nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.nav_element {
+  display: flex;
+  flex-flow: column;
+  
+  padding: 1.8rem 0;
+}
+
+.footer_link {
+  text-decoration: none;
+  color: var(--darkGreyColor);
+
+}
+
+.footer-active {
+  color: var(--greyColor);
+}
+
+@media (min-width: 300px) {
 
 }
