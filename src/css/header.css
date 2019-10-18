@@ -1,17 +1,20 @@
 .header {
   padding: var(--padding);
-  background-image: var(--headerLogo);
   background-repeat: no-repeat;
   background-position: right;
   margin-right: var();
+  display: flex;
+  justify-content: space-between;
 }
 
-.header__titles {
-  width: 23.6rem;
-}
 
 .h1-like {
   font-size: var(--title);
+  padding-top: .5rem;
+}
+
+.h1-like::after {
+  content: '\1F331';
 }
 
 .h2-like {

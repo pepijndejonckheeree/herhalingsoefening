@@ -4,6 +4,7 @@
   --darkColor: #212121;
   --greyColor: #9c9c9c;
   --darkGreyColor: #564f4f;
+  --lightgrey: #fafafa;
   --paddingBig: 3rem;
   --padding: 1.6rem;
   --paddingSmall: 1.2rem;
@@ -14,5 +15,5 @@
   --textBig: 2rem;
   --text: 1.8rem;
   --smallText: 1.2rem;
-  --headerLogo: url('../assets/img/plan-based-coffee.png');
+  --headerLogo: url(../assets/img/plan-based-coffee.png);
 }

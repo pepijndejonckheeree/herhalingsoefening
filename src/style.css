@@ -17,6 +17,10 @@ html {
 
 .layout {
   font-family: var(--fontFamily);
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+
 }
 
 .highlight {
@@ -25,6 +29,10 @@ html {
 
 .spaced {
   padding: var(--paddingBig);
+}
+
+.prices {
+  padding-top: 0;
 }
 
 .visually-hidden {
@@ -68,15 +76,29 @@ html {
   background-color: var(--secondColor);
   border-radius: 3px;
   font-size: var(--title);
-  align-self: center;
+  text-align: center;
   height: 3.8rem;
   width: 3.8rem;
+}
+
+.section_orders {
+  flex-grow: 2;
+  padding-bottom: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+.orders__wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 .order {
   border-bottom: 1px solid var(--greyColor);
   font-size: var(--text);
-  padding: var(--padding);
+  padding: var(--padding) var(--paddingBig);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,18 +111,21 @@ html {
 .remove {
   color: var(--greyColor);
   font-size: var(--text);
+  padding: 0;
 }
 
 .title_mini {
   font-size: var(--smallText);
+  text-transform: uppercase;
+  padding: var(--paddingBig)  var(--paddingBig) 0;
 }
 
 .total {
-  background-color: #fafafa;
-  padding: var(--padding);
+  background-color: var(--lightgrey);
+  padding: var(--padding)  var(--paddingBig);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 }
 
 .total__label, .total__price {
@@ -122,18 +147,21 @@ html {
   background-color: var(--darkColor);
   color: var(--darkGreyColor);
   font-size: var(--smallText);
+  padding: 0 8rem;
+  align-self: flex-end;
+  width: 100vw;
 }
 
 .footer_nav {
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .nav_element {
   display: flex;
   flex-flow: column;
-  
+
   padding: 1.8rem 0;
 }
 
@@ -147,6 +175,44 @@ html {
   color: var(--greyColor);
 }
 
-@media (min-width: 300px) {
+@media (min-width: 800px) {
 
+  .layout {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 0fr 2fr auto;
+    grid-template-areas:
+      'header orders'
+      'prices orders'
+      'picture orders'
+      'footer footer';
+  }
+
+  .header__titles {
+    grid-area: header;
+  }
+
+  .header_image{
+    grid-area: picture;
+  }
+
+  .prices {
+    grid-area: prices;
+  }
+
+  .section_orders {
+    grid-area: orders;
+  }
+
+  .total {
+    padding: var(--paddingBig);
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .prices__list {
+    grid-template-columns: 1fr;
+  }
 }
