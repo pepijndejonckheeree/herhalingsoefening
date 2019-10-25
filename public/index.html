@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <title>The Plant-Based Barista</title>
+<link href="style.b4eaa8599d4581c4d18c.css" rel="stylesheet"></head>
+
+<body>
+  <main class="layout">
+    <header class="header highlight spaced">
+      <div class="header__titles">
+        <a class="h2-like">The Plant-Based Barista</a>
+        <h1 class="h1-like">What do you want to order?</h1>
+      </div>
+      <picture class="header_image"><source
+        srcset="assets/img/plan-based-coffee@2x_result.webp"
+        sizes="12w"
+        type="image/webp"
+      />
+      <source
+        srcset="assets/img/plan-based-coffee@2x_result.webp"
+        sizes="102w"
+        type="image/webp"
+      />
+      <img class="header_image"
+        srcset="assets/img/plan-based-coffee@2x.png"
+        alt="kop logo"
+      /></picture>
+    </header>
+
+    <section class="prices highlight spaced">
+            <h2 class="visually-hidden">Price list</h2>
+            <ul class="prices__list">
+            </ul>
+    </section>
+    <section class="section_orders content">
+      <h2 class="title_mini">Order</h2>
+      <div class="orders__wrapper hide">
+        <ul class="orders">
+
+        <!--<li class="order">
+          <span class="order__name">
+            <span class="order__amount">1x </span>
+            Oat Latte
+          </span>
+          <span>
+            <span class="order__price">&euro;3,50</span>
+            <button class="remove">x</button>
+          </span>
+        </li>-->
+
+        </ul>
+        <!-- <p class="total">
+          <span class="total__label">Total price</span>
+          <span class="total__price">&euro; <span>0,00</span></span>
+        </p> -->
+      </div>
+      <div class="emptystate">
+        <img srcset="assets/img/coffee-maker.jpg 67w,assets/img/coffee-maker@2x.jpg 134w" sizes="67px" src="assets/img/coffee-maker.jpg" alt="A coffee maker">
+        <span class="emptystate__content">
+          Please order something
+          <span role="img" aria-label="Drunk emoji">🤪</span>
+        </span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer_nav">
+        <li class="nav_element">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyOCAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzLjg5ODggMEwyNy43OTc3IDEzLjM0NjhMMjYuMjUgMTQuODMxMkwyNC44MzYzIDEzLjQ3NDFWMjYuMDcwMkgyLjk2MTMyVjEzLjQ3NDFMMS41NDc2NSAxNC44MzEyTC0xLjkwNzM1ZS0wNiAxMy4zNDY4TDEzLjg5ODggMFpNMTMuODk4OCAyLjk3MDE5TDUuMTQ4ODIgMTEuMzc0MVYyMy45NzAySDIyLjY0ODhWMTEuMzc0MUwxMy44OTg4IDIuOTcwMTlaIiBmaWxsPSIjQjdCN0I3Ii8+Cjwvc3ZnPgo=" alt="home">
+          <a class="footer_link footer_home footer-active" href="index.html">Home</a>
+        </li>
+        <li  class="nav_element">
+          <img src="assets/img/about.svg" alt="about">
+          <a class="footer_link footer_about" href="index.html">About</a>
+        </li>
+        <li  class="nav_element">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzNiAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTM1LjU0IDI1LjYxMTJWMS45OTIwNEMzNS41NCAxLjcxMTk3IDM1LjQxMzYgMS40NDMzNyAzNS4xODg1IDEuMjQ1MzNDMzQuOTYzNSAxLjA0NzI5IDM0LjY1ODMgMC45MzYwMzUgMzQuMzQgMC45MzYwMzVIMS42NTk5OUMxLjM0MTczIDAuOTM2MDM1IDEuMDM2NTEgMS4wNDcyOSAwLjgxMTQ2MyAxLjI0NTMzQzAuNTg2NDIgMS40NDMzNyAwLjQ1OTk5MSAxLjcxMTk3IDAuNDU5OTkxIDEuOTkyMDRWMzEuMjA4QzAuNDU5OTcgMzEuNDI2MyAwLjUzNjc3NCAzMS42MzkxIDAuNjc5ODQ0IDMxLjgxNzRDMC44MjI5MTMgMzEuOTk1NiAxLjAyNTIyIDMyLjEzMDUgMS4yNTg5NCAzMi4yMDM0QzEuNDkyNjcgMzIuMjc2MyAxLjc0NjMyIDMyLjI4MzggMS45ODUwNCAzMi4yMjQ2QzIuMjIzNzUgMzIuMTY1NSAyLjQzNTc4IDMyLjA0MjggMi41OTE5OSAzMS44NzMzTDcuMzkxOTkgMjYuNjY3MkgzNC4zNEMzNC42NTgzIDI2LjY2NzIgMzQuOTYzNSAyNi41NTYgMzUuMTg4NSAyNi4zNTc5QzM1LjQxMzYgMjYuMTU5OSAzNS41NCAyNS44OTEzIDM1LjU0IDI1LjYxMTJaTTMzLjE0IDI0LjU1NTJINi43OTk5OUM2LjYyMTM5IDI0LjU1NTIgNi40NDUwNCAyNC41OTAzIDYuMjgzODEgMjQuNjU3OUM2LjEyMjU3IDI0LjcyNTUgNS45ODA1MSAyNC44MjM5IDUuODY3OTkgMjQuOTQ2TDIuODU5OTkgMjguMjE2VjMuMDQ4MDNIMzMuMTRWMjQuNTU1MloiIGZpbGw9IiM1NjRGNEYiLz4KPC9zdmc+Cg==" alt="admin">
+          <a class="footer_link footer_admin" href="index.html">Admin</a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+<script type="text/javascript" src="main.25c6e865c78a62018ae4.js"></script></body>
+</html>
