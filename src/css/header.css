@@ -1,7 +1,6 @@
 .header {
   grid-area: header;
   padding: var(--padding);
-  margin-right: var();
   display: flex;
   justify-content: space-between;
 }
