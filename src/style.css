@@ -177,7 +177,7 @@ html {
   .layout {
     display: grid;
     grid-template-columns: 3fr 5fr;
-    grid-template-rows: .5fr 2fr auto;
+    grid-template-rows: 1fr 2fr .5fr auto;
     grid-template-areas:
       'header orders'
       'prices orders'
@@ -186,15 +186,34 @@ html {
   }
 
   .prices {
+    grid-row: 2;
+    grid-column: 1;
     grid-area: prices;
+    z-index: 1;
   }
 
   .section_orders {
     grid-area: orders;
+    overflow: scroll;
+  }
+
+  .header {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+
+  .header__titles {
+    grid-row: 1;
+    grid-area: header;
   }
 
   .header_image {
     grid-area: picture;
+    position: absolute;
+    grid-column: 1;
+    grid-row: 5;
+    z-index: 2;
+    align-self: flex-end;
   }
 
   .footer {

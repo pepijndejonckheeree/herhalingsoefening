@@ -66,8 +66,6 @@ const getId = e => {
 
   console.log(drinkId);
 
-
-
   showOrder();
 };
 
@@ -75,24 +73,83 @@ const showOrder = () => {
 
   const orderslist = orders.filter(filterOrders);
 
+  const $emptystate = document.querySelector('.emptystate');
+  if ($emptystate) {
+    $emptystate.remove();
+  }
+
+  const $total = document.querySelector(`.total`);
+
+  if ($total) {
+    console.log('total');
+  } else {
+    showTotal();
+  }
+
   const $orders = document.querySelector('.orders');
 
   orderslist.forEach(order => {
 
-    $orders.innerHTML +=
-      `<li class="order">
-      <span class="order__name">
-        <span class="order__amount">${order.aantal}x </span>
-        ${order.naam}
-      </span>
-      <span>
-        <span class="order__price">&euro;3,50</span>
-        <button class="remove">x</button>
-      </span>
-    </li>`;
+    const $li = document.createElement('li');
+    $li.classList.add('order');
+    $orders.appendChild($li);
+
+    const $spanName = document.createElement('span');
+    $spanName.classList.add('order__name');
+    $spanName.innerHTML = `<span class="order__amount">${order.aantal}x </span>${order.naam}`;
+    $li.appendChild($spanName);
+
+    // const $spanAmount = document.createElement('span');
+    // $spanAmount.classList.add('order__amount');
+    // $spanAmount.textContent = ``;
+    // $spanName.appendChild($spanAmount);
+
+    const $spanWrapper = document.createElement('span');
+    $li.appendChild($spanWrapper);
+
+    const $spanPrice = document.createElement('span');
+    $spanPrice.classList.add('order__price');
+    $spanPrice.textContent = ` € 3,50`;
+    $spanWrapper.appendChild($spanPrice);
+
+    const $button = document.createElement('button');
+    $button.classList.add('remove');
+    $button.textContent = 'x';
+    $button.addEventListener('click', handleClose);
+    $spanWrapper.appendChild($button);
   });
 };
 
+const showTotal = () => {
+
+  const $ordersWrapper = document.querySelector(`.orders__wrapper`);
+
+  const $p = document.createElement('p');
+  $p.classList.add('total');
+  $ordersWrapper.appendChild($p);
+
+  const $spanLabel = document.createElement('span');
+  $spanLabel.classList.add('total__label');
+  $spanLabel.textContent = 'Total price';
+  $p.appendChild($spanLabel);
+
+  const $spanPrice = document.createElement('span');
+  $spanPrice.classList.add('total__price');
+  $spanPrice.innerHTML = '&euro;';
+  $p.appendChild($spanPrice);
+
+  const $span = document.createElement('span');
+  $span.textContent = '0,00';
+  $spanPrice.appendChild($span);
+};
+
+const handleClose = e => {
+  const $button = e.currentTarget;
+  const deleteOrder = $button.parentElement.parentElement;
+  console.log(deleteOrder);
+  deleteOrder.remove();
+
+};
 
 
 {
